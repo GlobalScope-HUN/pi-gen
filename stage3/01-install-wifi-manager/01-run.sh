@@ -13,5 +13,6 @@ apt-get install /tmp/wifi-manager_0.0.1_all.deb
 
 # Cleanup
 apt-get remove -y dh-virtualenv devscripts
+apt-get autoremove -y
 
 EOF
