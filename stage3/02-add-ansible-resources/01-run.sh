@@ -7,6 +7,6 @@ on_chroot << EOF
 pip3 install ssdpy
 
 # Set up Ansible inventory plugins path
-export ANSIBLE_INVENTORY_PLUGINS=/etc/ansible/plugins
+printf "export ANSIBLE_INVENTORY_PLUGINS=/etc/ansible/plugins\n" >> /etc/environment
 
 EOF
