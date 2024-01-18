@@ -8,10 +8,9 @@ cd /tmp/apt_repo
 # Create test armhf package
 test/setup_test armhf
 
-# Create APT repository to provide packages for edge devices
-./create_repository armhf
+cd aptServer
 
-# Create APT repository service
-./create_service armhf
+# Build AptServer Docker image
+make apt-server-arm64
 
 EOF
