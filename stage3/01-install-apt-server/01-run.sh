@@ -14,6 +14,6 @@ cd aptServer
 make apt-server-arm64-image
 
 # Generate service file
-make apt-server-arm64-service -> /lib/systemd/system/apt-server.service
+make apt-server-arm64-service > /lib/systemd/system/apt-server.service
 
 EOF

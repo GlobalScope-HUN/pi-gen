@@ -9,6 +9,6 @@ cd /etc/ansible
 make ansible-arm64-image
 
 # Generate service file
-make ansible-arm64-service -> /lib/systemd/system/ansible.service
+make ansible-arm64-service > /lib/systemd/system/ansible.service
 
 EOF
