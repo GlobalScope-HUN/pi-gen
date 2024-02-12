@@ -10,10 +10,13 @@ test/setup_test armhf
 
 cd aptServer
 
-# Build AptServer Docker image
-make apt-server-arm64-image
+# Generate package
+make package
 
 # Generate service file
 make apt-server-arm64-service > /lib/systemd/system/apt-server.service
+
+# Enable service
+systemctl enable apt-server
 
 EOF

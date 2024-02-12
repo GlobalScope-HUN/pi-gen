@@ -5,10 +5,10 @@ on_chroot << EOF
 
 cd /etc/ansible
 
-# Build Ansible Docker image
-make ansible-arm64-image
-
 # Generate service file
 make ansible-arm64-service > /lib/systemd/system/ansible.service
+
+# Enable service
+systemctl enable ansible
 
 EOF
