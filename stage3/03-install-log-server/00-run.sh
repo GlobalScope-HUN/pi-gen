@@ -1,14 +1,16 @@
 
-cp -r "${BASE_DIR}/../EffectiveRange/poc/log-server" "${ROOTFS_DIR}/etc/log-server"
+cp -r "${BASE_DIR}/../EffectiveRange/poc/logServer" "${ROOTFS_DIR}/etc/log-server"
 
 on_chroot << EOF
 
 cd /etc/log-server
 
-# Generate service file
-make log-server-arm64-service > /lib/systemd/system/log-server.service
+# Install service files
+cp /etc/log-server/service/log-server-setup.service /lib/systemd/system/log-server-setup.service
+cp /etc/log-server/service/log-server.service /lib/systemd/system/log-server.service
 
-# Enable service
+# Enable services
+systemctl enable log-server-setup
 systemctl enable log-server
 
 EOF
