@@ -11,10 +11,10 @@ cd /etc/wifi-manager/wifiManager
 dpkg-buildpackage -us -uc -b
 
 # Install wifi-manager
-apt-get install /etc/wifi-manager/wifi-manager_*_all.deb
+apt-get install /etc/wifi-manager/wifi-manager_*_armhf.deb
 
 # Cleanup
-apt-get remove -y dh-virtualenv devscripts
+apt-get remove -y dh-virtualenv devscripts libgirepository1.0-dev libcairo-gobject2
 apt-get autoremove -y
 
 EOF

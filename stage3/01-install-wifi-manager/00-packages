@@ -1,3 +1,5 @@
 debhelper
 dh-virtualenv
 devscripts
+libgirepository1.0-dev
+libcairo-gobject2
